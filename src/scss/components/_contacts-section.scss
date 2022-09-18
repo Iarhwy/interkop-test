@@ -1,0 +1,272 @@
+.contacts {
+  padding-top: 40px;
+  margin-top: -27px;
+  padding-bottom: 68px;
+  background-image: url('../img/contacts__back.webp');
+  @include bg-cover;
+
+  &__title {
+    font-family: "Gilroy";
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 31px;
+    color: var(--color-light);
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+  }
+
+  &__map {
+    grid-column: 1 / 9;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__map_darken {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 48.23%;
+    height: 100%;
+    padding-left: 70px;
+    padding-top: 140px;
+    padding-right: 50px;
+    padding-bottom: 110px;
+    background-color: var(--color-shaft);
+    opacity: 0.8;
+    transition: transform .8s ease-in-out;
+  }
+
+  &__map_darken span {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--color-light);
+  }
+
+  &__subtitle {
+    margin-bottom: 5px;
+    font-family: "YesevaOne";
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 104%;
+    color: var(--color-light);
+  }
+
+  &__descr {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: var(--color-light);
+  }
+
+  &__tel:last-child {
+    margin-bottom: 0;
+  }
+
+  &__tel {
+    width: 67%;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-burning);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__tel > span {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-burning);
+    margin-bottom: 0;
+  }
+
+  &__tel > svg {
+    margin-right: 5px;
+  }
+
+  &__btn {
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   width: 21px;
+   height: 21px;
+  }
+
+  &__map_darken-active {
+    transform: translateX(-85%);
+    transition: transform .8s ease-in-out;
+  }
+
+  &__map_darken-open {
+    transform: translateX(0);
+    transition: transform .8s ease-in-out;
+  }
+
+  &__btn-remove {
+    display: none;
+  }
+
+  &__btn-open {
+    opacity: 0;
+  }
+
+  &__btn-open-show {
+    opacity: 1;
+    position: absolute;
+    right: 20px;
+   top: 20px;
+   width: 21px;
+   height: 21px;
+   transition: opacity .3s ease-in-out;
+  }
+
+  &__wrapper {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(255, 255, 255, .6);
+    grid-column: 9/13;
+  }
+
+  &__wrapper__title {
+    margin-bottom: 5px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 22px;
+    color: var(--color-shaft);
+  }
+
+  &__wrapper__subtitle {
+    margin-bottom: 12px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-shaft);
+  }
+
+  &__form {
+    @include flex-column-start;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__input,
+  &__textarea {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-light);
+  }
+
+  &__input {
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    width: 100%;
+    padding: 16px 23px;
+  }
+
+  &__textarea {
+    border: none;
+    resize: none;
+    border-radius: 10px;
+    background-color: #5e5e5e;
+    width: 100%;
+    max-width: 100%;
+    min-height: 144px;
+    padding: 15.5px 23px;
+    margin-bottom: 20px;
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-light);
+  }
+
+  &__label {
+    position: relative;
+    width: 100%;
+    background-color: #5e5e5e;
+    margin-bottom: 20px;
+    min-height: 50px;
+    border-radius: 10px;
+  }
+
+  &__form__btn {
+    padding: 15px 21px;
+    max-height: 50px;
+    background-color: var(--color-burning);
+    border: 1px solid var(--color-burning);
+    border-radius: 15px;
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: var(--color-light);
+  }
+}
+
+.ymaps-2-1-79-copyright__link:focus,
+.ymaps-2-1-79-copyright__logo:focus {
+  outline: none;
+}
+
+.ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before {
+  border-radius: 20px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.just-validate-error-label {
+  position: absolute;
+    top: 4px;
+    left: 24px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 10px;
+    color: #ff0000 !important;
+}
+
+.just-validate-error-field {
+  outline: 3px solid #d70000;
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+

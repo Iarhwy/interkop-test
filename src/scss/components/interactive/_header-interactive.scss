@@ -1,0 +1,54 @@
+.header {
+  &__phone-wrapper > a:focus {
+    outline: transparent;
+    color: var(--color-green);
+  }
+
+  &__phone-wrapper > a:hover {
+    color: var(--color-burning);
+  }
+
+  &__phone-wrapper > a:active {
+    color: var(--color-grenadier);
+  }
+}
+
+.nav {
+  &__link {
+    position: relative;
+    z-index: 3;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__link::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    position: absolute;
+    background-color: var(--color-green);
+    border-radius: 10px;
+    width: 120%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__link:focus {
+    outline: none;
+    color: var(--color-light);
+  }
+
+  &__link:focus:not(:active):not(:hover)::before {
+    opacity: 1;
+  }
+
+  &__link:hover {
+    color: var(--color-burning);
+  }
+
+  &__link:active {
+    color: var(--color-grenadier);
+  }
+}

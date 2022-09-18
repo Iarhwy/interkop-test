@@ -1,0 +1,105 @@
+.about {
+  position: relative;
+  // background-color: var(--color-green);
+  background: linear-gradient(180deg, #008f6b,#009e77,#01a27a,#04d29f,#ffffff);
+  padding-top: 40px;
+  padding-bottom: 120px;
+  border-top-right-radius: 250px;
+
+  &__title {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 31px;
+    color: var(--color-light);
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    max-width: 94%;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    color: var(--color-light);
+}
+
+  &__list {
+    width: 780px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: -42px;
+    right: 207px;
+  }
+
+  &__item {
+    position: relative;
+    width: 220px;
+    height: 80px;
+    padding: 17px;
+    padding-top: 23px;
+    padding-left: 85px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.08);
+  }
+
+  &__item_pseudo1::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    bottom: 0;
+    right: 0;
+    width: 52px;
+    height: 58px;
+    background-image: url('../img/about__item_pseudo1.svg');
+    @include bg-cover;
+    background-size: contain;
+  }
+
+  &__item_pseudo2::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    bottom: 0;
+    right: 0;
+    width: 52px;
+    height: 58px;
+    background-image: url('../img/about__item_pseudo2.svg');
+    @include bg-cover;
+    background-size: contain;
+  }
+
+  &__item_pseudo3::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 11px;
+    bottom: 0;
+    right: 0;
+    width: 52px;
+    height: 58px;
+    background-image: url('../img/about__item_pseudo3.svg');
+    @include bg-cover;
+    background-size: contain;
+  }
+
+}
+
+.cards {
+  &__descr {
+    font-size: 17px;
+    line-height: 19px;
+    font-family: 'Gilroy';
+  }
+
+  &__descr > span {
+    font-size: 36px;
+    font-family: 'YesevaOne';
+    font-weight: 700;
+  }
+}

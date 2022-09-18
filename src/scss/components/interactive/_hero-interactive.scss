@@ -1,0 +1,19 @@
+.hero {
+  &__btn {
+    transition: outline 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &__btn:focus:not(:active):not(:hover) {
+    outline: 2px solid var(--color-burning);
+    background-color: var(--color-green);
+  }
+
+  &__btn:hover {
+    background-color: var(--color-green);
+    outline: transparent;
+  }
+
+  &__btn:active {
+    background-color: var(--color-grenadier);
+  }
+}
