@@ -1,0 +1,135 @@
+@media (min-width: 1024px) and (max-width: 1300px) {
+  .hero {
+    padding-top: 34px;
+    padding-bottom: 0;
+
+    &__container {
+      position: relative;
+      padding-left: inherit;
+    }
+
+    &__left {
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      padding-top: 50px;
+      padding-bottom: 0;
+      padding-left: unset;
+      margin-right: 1px;
+    }
+
+    &__left::before,
+    &__left::after {
+      display: none;
+    }
+
+    &__left-content {
+      align-items: center;
+      text-align: center;
+      min-height: 375px;
+    }
+
+    &__title,
+    &__descr {
+      color: var(--color-light);
+      text-shadow: unset;
+    }
+
+    &__right {
+      height: 650px;
+      width: 100%;
+      filter: brightness(0.5);
+      border-bottom-left-radius: unset;
+      border-top-left-radius: 0px;
+    }
+  }
+
+  .about {
+    padding-top: 65px;
+    padding-bottom: 120px;
+    border-top-right-radius: unset;
+
+    &__img1 {
+      top: -4%;
+      left: 23%;
+      width: 280px;
+      height: 280px;
+    }
+
+    &__img2 {
+      top: 45%;
+      left: 25%;
+      width: 250px;
+      height: 250px;
+    }
+
+    &__img3 {
+      top: 89%;
+      left: 31%;
+      width: 200px;
+      height: 200px;
+    }
+
+    &__list {
+      top: -5%;
+      left: 50%;
+      transform: translate(-50%, -5%);
+      right: unset;
+    }
+  }
+
+  .tabs {
+    &__btn {
+      padding: 25px 120px;
+    }
+
+    &__item:last-child {
+      left: 430px;
+    }
+
+    &__btn-soils::before,
+    &__btn-fertil::before {
+      left: 16%;
+    }
+  }
+
+  .product {
+    &:hover &__price-current {
+      color: var(--color-grenadier);
+      transform: translateX(calc(5rem - 30px));
+    }
+  }
+
+  .contacts {
+    &__map-darken {
+      padding-left: 50px;
+    }
+
+    &__tel {
+      width: 95%;
+    }
+
+    &__map_darken-active {
+      padding-left: 0;
+      transform: translateX(-81%);
+      transition: transform 0.8s ease-in-out, padding-left 0.8s ease-in-out;
+    }
+
+    &__label {
+      min-height: 44px;
+    }
+
+    &__input {
+      padding: 12px 23px;
+    }
+  }
+
+  .footer {
+    &__quote {
+      width: 50%;
+      text-align: center;
+    }
+  }
+}

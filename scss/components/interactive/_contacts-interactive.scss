@@ -1,0 +1,151 @@
+.contacts {
+   &__btn > svg circle {
+      transition: fill .3s ease-in-out;
+   }
+
+   &__btn:focus:not(:active):not(:hover) {
+      outline: none;
+   }
+
+   &__btn:focus:not(:active):not(:hover) > svg circle {
+      fill: var(--color-burning);
+   }
+
+   &__btn:hover {
+      outline: none;
+   }
+
+   &__btn:hover > svg circle {
+      outline: none;
+      fill: var(--color-green);
+   }
+
+   &__btn:active {
+      outline: none;
+   }
+
+   &__btn:active > svg circle {
+      fill: var(--color-grenadier);
+   }
+
+   &__btn-open > svg > g > path {
+      transition: fill .3s ease-in-out;
+   }
+
+   &__btn-open:focus:not(:active):not(:hover) {
+      outline: none;
+   }
+
+   &__btn-open:focus:not(:active):not(:hover) > svg > g > path:first-child {
+      fill: var(--color-burning);
+   }
+
+   &__btn-open:hover {
+      outline: none;
+   }
+
+   &__btn-open:hover > svg > g > path:first-child {
+      outline: none;
+      fill: var(--color-green);
+   }
+
+   &__btn-open:active {
+      outline: none;
+   }
+
+   &__btn-open:active > svg > g > path:first-child {
+      fill: var(--color-grenadier);
+   }
+
+   &__tel:focus {
+      outline: transparent;
+   }
+
+   &__tel {
+      transition: outline .3s ease-in-out, color .3s ease-in-out;
+   }
+
+   &__tel span {
+      transition: color .3s ease-in-out;
+   }
+
+   &__tel:focus:not(:active):not(:hover) span {
+      outline: none;
+      color: var(--color-grenadier);
+   }
+
+   &__tel:hover span {
+      outline: none;
+      color: var(--color-grenadier);
+   }
+
+   &__tel:active span {
+      outline: none;
+      color: var(--color-green);
+   }
+
+   &__label {
+      transition: filter .3s ease-in-out;
+   }
+
+   &__textarea,
+   &__input {
+      transition: filter .3s ease-in-out;
+   }
+
+   &__label:hover {
+      filter: drop-shadow(0px 4px 6px black);
+   }
+
+   &__input::placeholder, 
+   &__textarea::placeholder {
+      transition: color .3s ease-in-out;
+   }
+
+   &__input:focus:not(:hover),
+   &__textarea:focus:not(:hover) {
+      outline: 3px solid var(--color-light);
+      border-radius: 10px;
+   }
+
+   &__input:hover::placeholder,
+   &__textarea:hover::placeholder {
+      color: var(--color-silver);
+   }
+
+   &__textarea:hover {
+      outline: transparent;
+      filter: drop-shadow(2px 4px 6px black);
+   }
+
+   &__form__btn {
+      transition: background-color .3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
+
+   &__form__btn:focus:not(:active):not(:hover) {
+      outline: 2px solid var(--color-burning);
+      background-color: var(--color-green);
+   }
+
+   &__form__btn:hover {
+      background-color: var(--color-green);
+      transform: translateY(4px);
+      box-shadow: 0px 4px 6px var(--color-green);
+      outline: transparent;
+   }
+
+   &__form__btn:active {
+      background-color: var(--color-grenadier);
+      outline: none;
+   }
+
+}
+
+.ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before {
+   transition: background-color .3s ease-in-out;
+}
+
+.ymaps-2-1-79-zoom__button:hover,
+.ymaps-2-1-79-_hidden-text:hover {
+   background-color: var(--color-burning);
+}
