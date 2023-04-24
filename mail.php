@@ -35,7 +35,7 @@ try {
   $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
   $mail->Username   = 'mr-kiss'; // Логин на почте
   $mail->Password   = 'qg7urwQ14NBnJzgmf2gE'; // Пароль на почте
-  $mail->SMTPSecure = 'ssl';
+  $mail->SMTPSecure = 'tls';//ssl
   $mail->Port       = 587; //465
 
   $mail->setFrom('mr-kiss@mail.ru', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
