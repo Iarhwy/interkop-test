@@ -1,8 +1,8 @@
 <?php
 // Файлы phpmailer
-require 'PHPmailer/PHPMailer.php';
-require 'PHPmailer/SMTP.php';
-require 'PHPmailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 $title = "Тема письма";
 $file = $_FILES['file'];
@@ -35,8 +35,8 @@ try {
   $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
   $mail->Username   = 'mr-kiss'; // Логин на почте
   $mail->Password   = 'qg7urwQ14NBnJzgmf2gE'; // Пароль на почте
-  $mail->SMTPSecure = 'tls';//ssl
-  $mail->Port       = 587; //465
+  $mail->SMTPSecure = 'ssl';//tls
+  $mail->Port       = 465; //587
 
   $mail->setFrom('mr-kiss@mail.ru', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
